@@ -21,3 +21,11 @@ description: "Changes made to documentation"
 - customer's `dateOfBirth` must be in the following format: YYYY-MM-DD
 -  `lastName` is now required when creating wallet
 - customer's National Identity Number is now required when creating a wallet
+
+## [Version 1.10.4] - 2024-12-04
+- When creating a customer wallet, the customer's BVN and NIN are no longer required. 
+  You can use either the BVN or the NIN, or both (either one has to be present).
+- First Name is now required when creating customer wallet. 
+- Transaction Statement / Transaction List endpoint no longer exist. 
+- On theh Update Customer wallet owner with BVN endpoint, you can use either NIN 
+or BVN or both (if they are present).

@@ -1,10 +1,10 @@
 ---
-title: "Update Customer Wallet Owner with BVN"
+title: "Update Customer Wallet Owner with BVN  or NIN"
 description: "This endpoint is utilized to update Customer Wallet owner details with BVN."
 api: "PATCH /api/provider/wallets/{walletAccountNumber}/update"
 authMethod: "bearer"
 ---
-<Tip>On successful provision of customer BVN. Wallet Account Holder is Upgraded to Tier 2 Automatically. To Upgrade to Wallet Account Holder to Tier 3 please visit our [KYC API Documenation](https://www.notion.so/Readycash-Kyc-Documentation-61679f52414649bdb94ae471c60dd6dc)</Tip>
+<Tip>On successful provision of customer BVN or NIN, Wallet Account Holder is Upgraded. Wallet Account Holder is Upgraded to Tier 2 Automatically. To Upgrade to Wallet Account Holder to Tier 3 please visit our [KYC API Documenation](https://www.notion.so/Readycash-Kyc-Documentation-61679f52414649bdb94ae471c60dd6dc)</Tip>
 ## Path parameters
 
 <ParamField path="walletAccountNumber" type="number" required>
@@ -13,17 +13,21 @@ authMethod: "bearer"
 
 ## Request parameters
 
-<ParamField body="bvn" type="number" required>
+<ParamField body="bvn" type="number">
   Customers New BVN Number
+</ParamField>
+
+<ParamField body="nin" type="number">
+  Customers NIN Number
 </ParamField>
 
 
 <ParamField body="firstName" type="string" required>
-  Customers BVN Last Name
+  Customers BVN First Name
 </ParamField>
 
 <ParamField body="lastName" type="string" required>
-  Customers New BVN Number
+  Customers BVN lastName 
 </ParamField>
 
 <ParamField body="address" type="string" required>
@@ -35,6 +39,7 @@ authMethod: "bearer"
 ```json Request
 {
   "bvn": "2210034567890",
+  "nin": "22222222222"
   "firstName": "Alfred",
   "lastName": "Rewane",
   "address": "Muri Okinola"
